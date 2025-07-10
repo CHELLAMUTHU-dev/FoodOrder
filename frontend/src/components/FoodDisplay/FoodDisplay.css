@@ -1,0 +1,53 @@
+.food-display{
+    margin-top: 30px;
+    
+}
+.food-display h2{
+    font-size: max(2vw, 24px);
+    font-weight: 600;
+}
+
+.food-display-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(235px,1fr));
+    margin-top: 30px;
+    gap: 11px;
+    row-gap: 20px;
+} 
+
+.failure-view{
+    display: grid;
+    place-items: center;
+   margin-left: calc(100%);
+   gap: 15px;
+}
+
+.failure-view img{
+    width: 650px;
+}
+.failure-view p{
+    font-size: max(2vw, 18px);
+}
+
+.failure-view button{
+    border:1px solid rgb(14, 202, 212);
+    color: rgb(87, 75, 75);
+    outline: none;
+    background-color: transparent;
+    padding: 12px 15px;
+    border-radius: 4px;
+    font-size: max(1vw,15px);
+    cursor: pointer;
+    &:hover{
+        background-color: aliceblue;
+    }
+}
+
+@media (max-width:680px) {
+    .failure-view{
+        margin-left: calc(10%);
+    }
+    .failure-view img{
+        width: 350px;
+    }
+}

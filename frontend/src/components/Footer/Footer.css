@@ -1,0 +1,136 @@
+.footer{
+    color: #d9d9d9;
+    background-color: #323232;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 8vw;
+    padding-top: 30px;
+    margin-top:100px;
+}
+.footer-content{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 80px;
+}
+
+.footer-logo{
+    height: 60px;
+    width: 60px;
+}
+
+.footer-content-left , .footer-content-center, .footer-content-right{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+.footer-content-center li , .footer-content-left li, .footer-content-right li{
+    list-style: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 0.8em;
+}
+
+.footer-content-center li:hover , .footer-content-left li:hover, .footer-content-right li:hover{
+    animation: fadeIn 0.3s;
+    color: tomato;
+}
+
+.footer-content-center h2, .footer-content-right h2{
+    font-size: 1.1em;
+    position: relative;
+    overflow: hidden;
+    color: tomato ;
+    filter: opacity(90%);
+}
+
+.footer-content-center h2::after, .footer-content-right h2::after{
+    content: "";
+    display: block;
+    width: 80%;
+    height: 0.8px;
+    margin-top: 6px;
+    background: linear-gradient(90deg,#a4dd13 20%, #f34bc1);
+    border-radius: 2px;
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: fadeInLine 10s forwards;
+}
+
+@keyframes fadeInLine {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.footer-social-icons{
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-social-icons a{
+    display: flex;
+    margin-right: 15px;
+    border: 1px solid white;
+    padding: 8px;
+    border-radius: 100%;
+}
+.footer-social-icons a:hover{
+    background-color: #898686;
+    border: none;
+}
+.footer hr{
+    width: 100%;
+    height: 2px;
+    margin: 8px 0 3px 0;
+    background-color: gray;
+    border: none;
+}
+
+.footer-content-left{
+    position: relative;
+}
+
+.footer-content-left p{
+    font-size: 0.8em;
+}
+
+.footer-content-left .logo-text{
+    position:absolute;
+    top: 20%;
+    left: 11%;
+    font-weight: 600;
+    background: linear-gradient(180deg,#ed73d5 20%, #4bcef3);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font: 1.5em Times new roman;
+}
+@media (max-width:768px) {
+    .footer-content-left .logo-text{
+        top: 17%;
+        left: 15%;
+        font: 1.3em Times new roman;
+    }
+}
+
+.footer-copyright{
+    font-size: 15px;
+    padding: 0;
+}
+
+@media (max-width:750px) {
+    .footer-content{
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+    }
+    .footer-copyright{
+        text-align: center;
+    }
+}
