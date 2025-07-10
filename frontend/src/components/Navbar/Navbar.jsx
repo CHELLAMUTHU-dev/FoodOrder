@@ -57,6 +57,9 @@ const Navbar = ({ setShowLogin }) => {
         >
           contact us
         </a>
+        <a href="https://food-order-eta-lac.vercel.app/" style={{color:"tomato"}} >
+            Admin panel
+        </a>
       </ul>
       <div className="navbar-right">
         <FaSearch />
