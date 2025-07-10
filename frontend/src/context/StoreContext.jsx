@@ -11,7 +11,7 @@ const StoreContextProvider = (props) => {
     const [category, setCategory] = useState('All');
     const [cartItems,setCartItems] = useState({})
     const [cartData,setCartData] = useState({})
-    const url = 'http://localhost:5000'
+    const url = 'https://foodorder-xefc.onrender.com'
     
     const token = Cookies.get('jwt_token')
 
