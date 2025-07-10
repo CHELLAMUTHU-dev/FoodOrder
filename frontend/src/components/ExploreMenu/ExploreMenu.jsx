@@ -11,7 +11,7 @@ const apiStatusConstants = {
 }
 
 const ExploreMenu = () => {
-    const {changeCategory , category} = useContext(StoreContext);
+    const {changeCategory , category,url} = useContext(StoreContext);
 
     const [apiStatus, setApiStatus] = useState({
         status: apiStatusConstants.initial,
@@ -24,7 +24,7 @@ const ExploreMenu = () => {
             status: apiStatusConstants.inProgress,
         }));
         try {
-            const response = await fetch('http://localhost:5000/restaurant/menu'); // Replace with your API endpoint
+            const response = await fetch(url+'/restaurant/menu'); // Replace with your API endpoint
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
